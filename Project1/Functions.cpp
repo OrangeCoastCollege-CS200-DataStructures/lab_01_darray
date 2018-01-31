@@ -11,11 +11,18 @@ void DArray::emptyArray() {
 
 
 // Definition function more1than0
-// Your code here...
+bool DArray::more1than0() {
+	int num0 = 0;
+	int num1 = 0;
+	for (int i = 0; i < numOfElements; i++) {
+		num0 += a[i] == 0;
+		num1 += a[i] == 0;
+	}
+	return num1 > num0;
+}
 
 
 // Definition function post4
-// Your code here...
 
 
 // Definition move constructor

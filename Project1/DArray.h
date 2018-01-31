@@ -40,7 +40,7 @@ public:
 
 	
 	// Declaration function more1than0
-	// Your code here...
+	bool more1than0();
 
 
 	// Declaration function post4
