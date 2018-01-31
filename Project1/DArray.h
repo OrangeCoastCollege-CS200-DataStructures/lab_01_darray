@@ -44,7 +44,7 @@ public:
 
 
 	// Declaration function post4
-	// Your code here...
+	void post4(DArray& other) const;
 
 	
 	// Declaration move constructor

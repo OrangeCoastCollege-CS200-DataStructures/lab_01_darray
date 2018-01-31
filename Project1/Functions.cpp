@@ -1,5 +1,10 @@
 /*
-	(name header)
+	Badajoz, Seve
+
+	CS A200
+	January 31, 2018
+
+	Lab 01
 */
 
 #include "DArray.h"
@@ -23,7 +28,15 @@ bool DArray::more1than0() {
 
 
 // Definition function post4
-
+void DArray::post4(DArray& other) const{
+	int indexOf4;
+	for (int i = numOfElements - 1; i > -1; i--) 
+		if (a[i] == 4) indexOf4 = i;
+	for (int i = 0; i < indexOf4; i++) {
+		other.a[i] = a[indexOf4 + 1 + i];
+		other.numOfElements += 1;
+	}
+}
 
 // Definition move constructor
 // Your code here...
