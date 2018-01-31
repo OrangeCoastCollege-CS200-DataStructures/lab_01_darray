@@ -31,24 +31,34 @@ bool DArray::more1than0() {
 void DArray::post4(DArray& other) const {
 	int indexOf4;
 	for (int i = numOfElements - 1; i > -1; i--) {
-	if (a[i] == 4) {
-		indexOf4 = i;
-		i = -1;
+		if (a[i] == 4) {
+			indexOf4 = i;
+			i = -1;
+		}
 	}
-}
 	for (int i = 0; i < numOfElements - indexOf4 - 1; i++)
 		other.addElement(a[indexOf4 + 1 + i]);
 }
 
 // Definition move constructor
-DArray::DArray(const DArray&& other) {
+DArray::DArray(DArray&& other) {
 	numOfElements = other.numOfElements;
 	capacity = other.capacity;
 	a = other.a;
-	other.~DArray();
+	other.numOfElements = 0;
+	other.capacity = 0;
+	other.a = nullptr;
 }
 
 
 // Definition move assignment operator
-// Your code here...
+DArray& DArray::operator=(DArray&& other) {
+	numOfElements = other.numOfElements;
+	capacity = other.capacity;
+	a = other.a;
+	other.a = nullptr;
+	other.numOfElements = 0;
+	other.capacity = 0;
+	return *this;
+}
 

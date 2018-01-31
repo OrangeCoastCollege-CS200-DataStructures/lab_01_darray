@@ -48,11 +48,12 @@ public:
 
 	
 	// Declaration move constructor
-	DArray(const DArray&& other);
+	DArray(DArray&& other);
 	
 
 	// Declaration move assignment operator
-	// Your code here...
+	DArray& operator=(DArray&& other);
+	
 
 
 private:
