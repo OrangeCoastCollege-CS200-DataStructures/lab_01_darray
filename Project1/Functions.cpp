@@ -36,14 +36,17 @@ void DArray::post4(DArray& other) const {
 		i = -1;
 	}
 }
-	for (int i = 0; i < numOfElements - indexOf4 - 1; i++) {
-		other.a[i] = a[indexOf4 + 1 + i];
-		other.numOfElements += 1;
-	}
+	for (int i = 0; i < numOfElements - indexOf4 - 1; i++)
+		other.addElement(a[indexOf4 + 1 + i]);
 }
 
 // Definition move constructor
-// Your code here...
+DArray::DArray(const DArray&& other) {
+	numOfElements = other.numOfElements;
+	capacity = other.capacity;
+	a = other.a;
+	other.~DArray();
+}
 
 
 // Definition move assignment operator

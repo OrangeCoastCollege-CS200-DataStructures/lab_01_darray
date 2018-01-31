@@ -48,7 +48,7 @@ public:
 
 	
 	// Declaration move constructor
-	// Your code here...
+	DArray(const DArray&& other);
 	
 
 	// Declaration move assignment operator
