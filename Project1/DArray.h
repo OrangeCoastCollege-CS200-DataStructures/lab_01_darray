@@ -36,7 +36,7 @@ public:
 	/**********************************************************************/
 	
 	// Declaration function emptyArray
-	// Your code here...
+	void emptyArray();
 
 	
 	// Declaration function more1than0

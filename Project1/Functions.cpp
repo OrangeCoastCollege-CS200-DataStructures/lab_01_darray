@@ -5,7 +5,9 @@
 #include "DArray.h"
 
 // Definition function emptyArray
-// Your code here...
+void DArray::emptyArray() {
+	numOfElements = 0;
+}
 
 
 // Definition function more1than0
